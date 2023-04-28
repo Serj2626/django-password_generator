@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('Hello friend')
+    return render(request, 'generator/home.html')
 
 
 def eggs(request):
