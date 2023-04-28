@@ -1,7 +1,7 @@
-from django.urls import path, include
+from django.urls import path
 from generator import views
 
 urlpatterns = [
-    path('', views.home),
-    path('eggs/', views.eggs),
+    path('', views.home, name='password'),
+    path('password/', views.password),
 ]
