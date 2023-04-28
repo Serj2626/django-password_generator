@@ -9,6 +9,7 @@ def home(request):
 
 
 def password(request):
+    '''This function generates a random password'''
     characters = list('abcdefghijklmnoprstuvwxyz')
 
     if request.GET.get('uppercase'):
@@ -27,3 +28,8 @@ def password(request):
     for x in range(length):
         thepassword += random.choice(characters)
     return render(request, 'generator/password.html', {'password': thepassword})
+
+
+def about(request):
+    '''This function tells about the author of the application'''
+    return render(request, 'generator/about.html')
