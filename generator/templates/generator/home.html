@@ -1,6 +1,9 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+{% extends 'generator/main.html' %}
+
+{% block title %}Home page{% endblock %}
 
 
+{% block content %}
 <div class="container text-center">
 <h1>Password Generator</h1>
 
@@ -32,3 +35,4 @@
 <a class="btn btn-primary" href="{% url 'about' %}" style="text-decoration: none">About page</a>
 
 </div>
+{% endblock %}
