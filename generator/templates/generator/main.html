@@ -8,7 +8,18 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
+
 <body>
-{% block content %}{% endblock %}
+
+<header style="border-bottom: 5px solid black">
+    {% block header %}
+    {% endblock %}
+</header>
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
 </body>
 </html>

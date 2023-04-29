@@ -2,12 +2,16 @@
 
 {% block title %}About{% endblock %}
 
+{% block header %}
+    <nav class="navbar navbar-light" style="background-color: white;">
+        <a class="btn btn-primary" href="{% url 'home' %}" style="text-decoration: none">Home</a>
+    </nav>
+{% endblock %}
+
+
 {% block content %}
 <div class="container text-center">
 <h1>About</h1>
 <p>This is a password generator created by Sergey Boytov.<br>Enjoy fam!</p>
-
-
-<a class="btn btn-primary" href="{% url 'home' %}" style="text-decoration: none">Home</a>
 </div>
 {% endblock %}

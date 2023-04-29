@@ -1,12 +1,20 @@
 {% extends 'generator/main.html' %}
 
+
 {% block title %}Home page{% endblock %}
 
 
-{% block content %}
-<div class="container text-center">
-<h1>Password Generator</h1>
+{% block header %}
+    <nav class="navbar navbar-light" style="background-color: white;">
+        <a class="btn btn-primary" href="{% url 'about' %}" style="text-decoration: none">About page</a>
+    </nav>
+{% endblock %}
 
+
+
+{% block content %}
+<div class="container text-center form-floating">
+<h1>Password Generator</h1>
 <form action="{% url 'password' %}">
     <select class="form-select" aria-label name="length">
         <option value="6">6</option>
@@ -32,7 +40,5 @@
 <br>
 <br>
 <br>
-<a class="btn btn-primary" href="{% url 'about' %}" style="text-decoration: none">About page</a>
-
 </div>
 {% endblock %}
